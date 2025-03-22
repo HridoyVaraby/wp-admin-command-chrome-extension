@@ -1,7 +1,7 @@
 // WP Admin Command - Content Script
 
 // Storage key for extension settings
-const taStorageKey = 'wp-admin-command-settings';
+const taStorageKey = 'turbo-admin-settings';
 
 // Global variables
 let settings = null;
