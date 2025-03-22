@@ -1,0 +1,197 @@
+/* Turbo Admin for WordPress - Chrome Extension Styles */
+
+#ta-command-palette-container {
+	font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+	font-size: 20px;
+	background-color: rgba(0, 0, 0, 0.0);
+	position: fixed;
+	top: 0;
+	left: 0;
+    box-sizing: border-box;
+	width: 100vw;
+	height: 0vh;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	z-index: 999999;
+	transition: background-color 0.3s, height 0s 0.3s;
+	overflow: hidden;
+}
+
+#ta-command-palette-container.active {
+	background-color: rgba(0, 0, 0, 0.4);
+	height: 100vh;
+	transition: background-color 0.3s;
+}
+
+#ta-command-palette-container * {
+    box-sizing: border-box;
+    -moz-osx-font-smoothing: auto;
+}
+
+#ta-command-palette {
+	display: flex;
+	flex-direction: column;
+	background-color: #000;
+	width: 60%;
+	max-width: 600px;
+	padding: 16px;
+	border-radius: 8px;
+	position: absolute;
+	top: calc( 10vh + 20px );
+	left: 50%;
+	overflow: visible;
+	transform: translateX(-50%);
+	opacity: 0;
+	transition: top 0.3s, opacity 0.3s;
+    -webkit-font-smoothing: subpixel-antialiased;
+}
+
+#ta-command-palette-container.active #ta-command-palette {
+	opacity: 1;
+	top: 10vh;
+}
+
+#ta-command-palette-tab-notice {
+    display: block;
+    color: white;
+    position: absolute;
+    right: 24px;
+    font-size: 12px;
+    line-height: 1;
+    top: 29px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    z-index: 20;
+}
+
+#ta-command-palette-tab-notice.active {
+    opacity: 1;
+}
+
+#ta-command-palette-tab-notice-button {
+    display: inline-block;
+    color: white;
+    border: 1px solid white;
+    position: relative;
+    font-size: 12px;
+    border-radius: 4px;
+    padding: 2px 4px;
+    margin-left: 6px;
+}
+
+#ta-command-palette-search-mode-tag,
+#ta-command-palette-notice {
+    color: white;
+    font-size: 16px;
+    border-radius: 6px;
+    background-color:rgb(51,51,51);
+    position: absolute;
+    left: 20px;
+    top: 16px;
+    padding: 4px 8px;
+    z-index: 20;
+}
+
+#ta-command-palette-search {
+	position: relative;
+	margin-bottom: 16px;
+}
+
+#ta-command-palette-input {
+	width: 100%;
+	padding: 8px 16px;
+	font-size: 20px;
+	border: none;
+	border-radius: 4px;
+	background-color: #333;
+	color: white;
+}
+
+#ta-command-palette-input:focus {
+	outline: none;
+	box-shadow: 0 0 0 2px #1e90ff;
+}
+
+#ta-command-palette-items-container {
+	max-height: 60vh;
+	overflow-y: auto;
+	padding-right: 8px;
+}
+
+#ta-command-palette-items {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.ta-command-palette-item {
+	display: flex;
+	align-items: center;
+	padding: 8px 16px;
+	border-radius: 4px;
+	cursor: pointer;
+	color: white;
+}
+
+.ta-command-palette-item:hover,
+.ta-command-palette-item.selected {
+	background-color: #333;
+}
+
+.ta-command-palette-item-icon {
+	margin-right: 12px;
+	font-size: 20px;
+	width: 24px;
+	height: 24px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.ta-command-palette-item-text {
+	flex: 1;
+}
+
+.ta-command-palette-no-results {
+	color: #999;
+	padding: 16px;
+	text-align: center;
+}
+
+/* Scrollbar styling */
+#ta-command-palette-items-container::-webkit-scrollbar {
+	width: 8px;
+}
+
+#ta-command-palette-items-container::-webkit-scrollbar-track {
+	background: #222;
+	border-radius: 4px;
+}
+
+#ta-command-palette-items-container::-webkit-scrollbar-thumb {
+	background: #555;
+	border-radius: 4px;
+}
+
+#ta-command-palette-items-container::-webkit-scrollbar-thumb:hover {
+	background: #777;
+}
+
+/* Block editor fullscreen disable */
+.ta-disable-block-editor-fullscreen .edit-post-header__settings [aria-label="Fullscreen mode"] {
+	display: none;
+}
+
+.ta-disable-block-editor-fullscreen .is-fullscreen-mode {
+	top: 32px !important;
+}
+
+.ta-disable-block-editor-fullscreen .is-fullscreen-mode .edit-post-header {
+	top: 32px !important;
+}
+
+/* Admin bar search button */
+#wp-admin-bar-ta-search .ab-icon {
+	top: 2px;
+}

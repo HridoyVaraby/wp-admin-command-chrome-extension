@@ -1,0 +1,44 @@
+{
+  "manifest_version": 3,
+  "name": "Turbo Admin for WordPress",
+  "version": "1.0.0",
+  "description": "The command palette that gives super fast access to your WordPress Dashboard.",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    },
+    "default_title": "Turbo Admin for WordPress"
+  },
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting",
+    "notifications"
+  ],
+  "host_permissions": [
+    "*://*/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*/*wp-admin*", "*://*/*/wp-login.php*"],
+      "js": ["content.js"],
+      "css": ["turbo-admin.css"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["icons/*", "images/*"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
