@@ -1,4 +1,4 @@
-// Turbo Admin for WordPress - Background Script
+// WP Admin Command - Background Script
 
 // Storage key for extension settings
 const taStorageKey = 'turbo-admin-settings';
@@ -73,7 +73,7 @@ chrome.action.onClicked.addListener((tab) => {
     // Add error handling for the sendMessage call
     chrome.tabs.sendMessage(tab.id, { action: 'togglePalette' })
       .catch(error => {
-        console.log('Turbo Admin: Error sending message to tab', error);
+        console.log('WP Admin Command: Error sending message to tab', error);
         // The content script might not be loaded yet, or the tab might not exist
         // We could reload the tab or show a notification to the user
       });
@@ -81,7 +81,7 @@ chrome.action.onClicked.addListener((tab) => {
     // If not on a WordPress admin page, show a notification or open options
     chrome.tabs.sendMessage(tab.id, { action: 'notWordPress' })
       .catch(error => {
-        console.log('Turbo Admin: Error sending message to tab', error);
+        console.log('WP Admin Command: Error sending message to tab', error);
         // Handle the error appropriately
       });
   }

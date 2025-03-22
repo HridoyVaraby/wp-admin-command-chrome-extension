@@ -1,7 +1,7 @@
-// Turbo Admin for WordPress - Content Script
+// WP Admin Command - Content Script
 
 // Storage key for extension settings
-const taStorageKey = 'turbo-admin-settings';
+const taStorageKey = 'wp-admin-command-settings';
 
 // Global variables
 let settings = null;

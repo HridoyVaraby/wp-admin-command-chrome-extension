@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Turbo Admin for WordPress",
+  "name": "WP Admin Command",
   "version": "1.0.0",
   "description": "The command palette that gives super fast access to your WordPress Dashboard.",
   "icons": {
@@ -14,7 +14,7 @@
       "48": "icons/icon48.png",
       "128": "icons/icon128.png"
     },
-    "default_title": "Turbo Admin for WordPress"
+    "default_title": "WP Admin Command"
   },
   "permissions": [
     "storage",
