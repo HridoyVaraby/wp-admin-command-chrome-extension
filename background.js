@@ -1,7 +1,7 @@
 // WP Admin Command - Background Script
 
 // Storage key for extension settings
-const taStorageKey = 'turbo-admin-settings';
+const taStorageKey = 'wp-admin-command-settings';
 
 // Default settings for the extension
 const defaultSettings = {
