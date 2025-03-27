@@ -38,7 +38,7 @@ A Chrome extension that provides a command palette for super fast access to your
 
 ## Configuration
 
-The extension comes with sensible defaults, but you can customize various settings:
+The extension comes with sensible defaults, but you can customize various settings anytime:
 
 - Keyboard shortcuts
 - UI enhancements
