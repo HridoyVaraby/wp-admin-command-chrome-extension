@@ -42,7 +42,7 @@ The extension comes with sensible defaults, but you can customize various settin
 
 - Keyboard shortcuts
 - UI enhancements
-- Debug mode
+- Debug mode. No need to code. 
 
 ## Development
 
