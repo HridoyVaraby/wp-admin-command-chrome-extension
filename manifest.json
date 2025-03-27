@@ -14,7 +14,7 @@
       "48": "icons/icon48.png",
       "128": "icons/icon128.png"
     },
-    "default_title": "WP Admin Command"
+    "default_title": "WP Admin Command (Ctrl+Shift+Z)"
   },
   "permissions": [
     "storage",
